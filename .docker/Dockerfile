@@ -105,8 +105,6 @@ RUN echo "* - nice -15" >> /etc/security/limits.conf
 RUN mkdir -p dev_ws/src
 WORKDIR /dev_ws/src
 
-RUN ["/bin/bash", "-c", "git clone https://github.com/tork-a/rqt_joint_trajectory_plot.git "]
-
 # Stomp motion planning
 # ----------------------------------------
 FROM base as stomp
@@ -147,8 +145,6 @@ RUN apt-key adv \
     librealsense2-dev librealsense2-dbg
 
 WORKDIR /dev_ws/src
-RUN git clone https://github.com/rjwb1/realsense-ros.git
-
 
 # Astra camera
 # ----------------------------------------
