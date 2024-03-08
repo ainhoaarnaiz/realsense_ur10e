@@ -1,0 +1,85 @@
+path:
+ - pose_id: 0
+   position: [0.349, -0.2975 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 1
+   position: [0.849, -0.2975 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 2
+   position: [0.879052038461, -0.28505203794 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.8915, -0.255 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 3
+   position: [0.87905203794, -0.224947961539 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.849, -0.2125 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 4
+   position: [0.349, -0.2125 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 5
+   position: [0.318947961539, -0.20005203794 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.3065, -0.17 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 6
+   position: [0.31894796206, -0.139947961539 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.349, -0.1275 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 7
+   position: [0.849, -0.1275 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 8
+   position: [0.879052038461, -0.11505203794 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.8915, -0.085 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 9
+   position: [0.87905203794, -0.0549479615392 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.849, -0.0425 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 10
+   position: [0.349, -0.0425 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 11
+   position: [0.318947961539, -0.03005203794 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.3065, -2.60237444819e-18 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 12
+   position: [0.31894796206, 0.0300520384608 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.349, 0.0425 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 13
+   position: [0.849, 0.0425 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 14
+   position: [0.879052038461, 0.05494796206 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.8915, 0.085 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 15
+   position: [0.87905203794, 0.115052038461 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.849, 0.1275 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 16
+   position: [0.349, 0.1275 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 17
+   position: [0.318947961539, 0.13994796206 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.3065, 0.17 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_pair_id: 18
+   position: [0.31894796206, 0.200052038461 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
+   centre_position: [0.349, 0.2125 , 0.25]
+   centre_quaternion: [0.0, 1.0, 0.0, 0.0]
+ - pose_id: 19
+   position: [0.849, 0.2125 , 0.25]
+   quaternion: [0.0, 1.0, 0.0, 0.0]
