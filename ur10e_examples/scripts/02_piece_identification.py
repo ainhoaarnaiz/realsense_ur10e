@@ -1,28 +1,45 @@
+from keras.models import load_model
 import cv2
-import easyocr
+import numpy as np
 import os
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_directory, "keras_model.h5")
+label_path = os.path.join(current_directory, "labels.txt")
+image_path = os.path.join(current_directory, "label_02.jpeg")
 
-# Define the file path
-filename = os.path.join(current_directory, "label_02.jpeg")
+# Disable scientific notation for clarity
+np.set_printoptions(suppress=True)
 
-# Read the image
-image = cv2.imread(filename)
+# Load the model
+model = load_model(model_path, compile=False)
 
-# Convert the image to grayscale
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# Load the labels
+class_names = open(label_path, "r").readlines()
 
-# Initialize EasyOCR reader
-reader = easyocr.Reader(['en'], gpu=False)  # Adjust language and GPU usage as needed
+# Read the uploaded image
+image = cv2.imread(image_path)
 
-# Perform text detection
-result = reader.readtext(gray)
+# Resize the raw image into (224-height,224-width) pixels
+image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA)
 
-# Extract detected text
-detected_text = [text[1] for text in result]
+# Show the image in a window
+# cv2.imshow("Uploaded Image", image)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
-# Print the detected text
-print("Detected Handwritten Text:")
-for text in detected_text:
-    print(text)
+# Make the image a numpy array and reshape it to the model's input shape
+image = np.asarray(image, dtype=np.float32).reshape(1, 224, 224, 3)
+
+# Normalize the image array
+image = (image / 127.5) - 1
+
+# Predict the model
+prediction = model.predict(image)
+index = np.argmax(prediction)
+class_name = class_names[index]
+confidence_score = prediction[0][index]
+
+# Print prediction and confidence score
+print("Class:", class_name[2:], end="")
+print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
