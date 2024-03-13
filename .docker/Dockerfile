@@ -40,6 +40,11 @@ RUN pip3 install -U --no-cache-dir\
     autopep8 \
     numpy \
     open3d \
+    tensorflow \
+    transforms3d \
+    keras \
+    opencv-python \
+    torch \
     pyquaternion \
     python-dateutil \
     pyrealsense2
