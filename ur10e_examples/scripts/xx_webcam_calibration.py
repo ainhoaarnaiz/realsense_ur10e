@@ -5,6 +5,9 @@ import cv2.aruco as aruco
 # Initialize the webcam
 cap = cv2.VideoCapture(1)
 
+# Define the file path
+file_path = "/dev_ws/src/ur10e_examples/calibration/calibration_data.npz"
+
 # Prepare the calibration pattern (chessboard)
 chessboard_size = (8, 6)
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
@@ -67,7 +70,7 @@ if len(objpoints) == num_images_required:
     print("Calibration successful.")
 
     # Save the camera matrix and the distortion coefficients to a file
-    np.savez('calibration_data.npz', ret=ret, camera_matrix=mtx, dist_coeffs=dist, rvecs=rvecs, tvecs=tvecs)
+    np.savez(file_path, ret=ret, camera_matrix=mtx, dist_coeffs=dist, rvecs=rvecs, tvecs=tvecs)
     print("Calibration data saved.")
 else:
     print("Calibration failed or insufficient images captured.")

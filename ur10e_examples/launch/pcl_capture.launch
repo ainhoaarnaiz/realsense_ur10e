@@ -1,0 +1,15 @@
+<launch>
+  <arg name="file_path" default="/dev_ws/src/ur10e_examples/captures/raw_A1.ply" />
+  <arg name="save_path" default="/dev_ws/src/ur10e_examples/captures/down_A1.ply" />
+
+  <node pkg="ur10e_examples" type="02_reconstruction_node.py" name="reconstruction_node" output="screen">
+    <param name="ply_file_path" type="string" value="$(arg file_path)" />
+  </node>
+
+  <node pkg="ur10e_examples" type="03_downsampling_node.py" name="filtering_node" output="screen">
+    <param name="ply_file_path" type="string" value="$(arg file_path)" />
+    <param name="ply_save_path" type="string" value="$(arg save_path)" />
+  </node>
+
+
+</launch>

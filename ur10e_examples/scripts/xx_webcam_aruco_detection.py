@@ -1,13 +1,9 @@
 import cv2
 import numpy as np
 from cv2 import aruco
-import os
-
-# Get the directory of the current Python script
-current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Define the file path
-file_path = os.path.join(current_directory, "calibration_data.npz")
+file_path = "/dev_ws/src/ur10e_examples/calibration/calibration_data.npz"
 
 calibration_data = np.load(file_path)
 mtx = calibration_data['camera_matrix']
